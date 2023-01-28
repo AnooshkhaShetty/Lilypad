@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
 .section{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 500px;
   background-color: green;
   border-radius: 10px; /* this will make the box rounded */
   padding: 20px; /* this will create space between the text and the edges of the box */
   color: white; /* this will change the text color to white*/
+  font-family: "Inter";
+  border: 5px solid rgb(6, 64, 19);
 }
 
 .section-header{
@@ -10,7 +20,9 @@
   background-color: white;
   border-radius: 10px; /* this will make the box rounded */
   padding: 10px;
-  color: green
+  color: green;
+  font-family: "Poppins";
+  font-size: 25px; 
 }
 
 h1 {
@@ -19,4 +31,71 @@ h1 {
   background-color: green;
   color: white;
   font-family: "Poppins"; 
+
+}
+
+.section-row{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+logo-box{
+  display: flex;
+  margin-left: auto;
+}
+
+
+.flip-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 150px;
+  align-items: center;
+
+  background-color: green;
+  border-radius: 10px; /* this will make the box rounded */
+  padding: 20px; /* this will create space between the text and the edges of the box */
+  color: white; /* this will change the text color to white*/
+  font-family: "Inter";
+  border: 5px solid rgb(6, 64, 19);
+  perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: green;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
 }
