@@ -1,0 +1,22 @@
+.section{
+  background-color: green;
+  border-radius: 10px; /* this will make the box rounded */
+  padding: 20px; /* this will create space between the text and the edges of the box */
+  color: white; /* this will change the text color to white*/
+}
+
+.section-header{
+  text-align: center;
+  background-color: white;
+  border-radius: 10px; /* this will make the box rounded */
+  padding: 10px;
+  color: green
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 900;
+  background-color: green;
+  color: white;
+  font-family: "Poppins"; 
+}
