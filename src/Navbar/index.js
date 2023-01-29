@@ -12,10 +12,7 @@ const Navbar = () => {
           <h1>Lilypad</h1>
           </NavLink>
           <NavLink to="/about" activeStyle>
-            About
-          </NavLink> 
-          <NavLink to="/login" activeStyle>
-            Login
+            About Us
           </NavLink>
           <NavLink to="/listings" activeStyle>
             Listings
