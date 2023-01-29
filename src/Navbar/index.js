@@ -20,6 +20,9 @@ const Navbar = () => {
           <NavLink to="/addlisting" activeStyle>
             Add a Listing +
           </NavLink>
+          <NavLink to="/Login" activeStyle>
+            Login
+          </NavLink>
         </NavMenu>
       </Nav>
     </div>
