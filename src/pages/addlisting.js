@@ -1,6 +1,6 @@
 import React from "react";
 import {db} from '../config.js';
-import { doc, setDoc, getDoc } from "firebase/firestore";   
+import { doc, setDoc } from "firebase/firestore";   
 import { useState } from 'react';
 
 
@@ -12,16 +12,6 @@ const addSomething = async (organization, food, servings, location) => {
     food: {food, servings},
     location: location
   });
-}
-const getSomething = async () => {
-  const docRef = doc(db, "sellers", "Ashish");
-  const docSnap = await getDoc(docRef);
-
-  if (docSnap.exists()) {
-    alert(docSnap.data().selling.radashishes)
-  } else {
-    alert("no doc :(")
-  }
 }
 
 
