@@ -26,12 +26,13 @@
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 900;
   background-color: green;
+  border-radius: 10px;
   color: white;
   font-family: "Poppins";
-
+  text-align: left;
 }
 
 .section-row{
@@ -98,4 +99,25 @@ logo-box{
 .flip-card-back {
   color: white;
   transform: rotateY(180deg);
+}
+
+.formbox{
+  display: flex;
+  border:rgb(6, 64, 19);
+  border-radius: 20px;
+  justify-content: center;
+
+
+}
+
+.form-entry{
+  display:flex;
+  background-color: green;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 30px;
+}
+
+.form-text{
+  color: white;
 }

@@ -1,14 +1,16 @@
 import React from "react";
   
-const About = () => {
+const Listings = () => {
   return (
     <div>
       <h1>
-        GeeksforGeeks is a Computer
-        Science portal for geeks.
+        Listings
       </h1>
+      <p>
+        Here you can find listings of people and organization giving out food:
+      </p>
     </div>
   );
 };
   
-export default About;
+export default Listings;
