@@ -34,6 +34,8 @@ const Listings = () => {
             <p><b>Food: </b>{seller.food.food}</p>
             <p><b>Servings: </b>{seller.food.servings}</p>
             <p><b>Location: </b>{seller.location}</p>
+            <p><b>Date: </b>{seller.date}</p>
+            <p><b>Time: </b>{seller.time}</p>
           </div>
         );
       } 

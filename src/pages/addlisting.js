@@ -5,12 +5,14 @@ import { useState } from 'react';
 
 
 
-const addSomething = async (organization, food, servings, location) => {
+const addSomething = async (organization, food, servings, location, date, time) => {
   // Add a new document in collection "cities"
   await setDoc(doc(db, "listings", organization), {
     organization: organization,
     food: {food, servings},
-    location: location
+    location: location,
+    date: date,
+    time: time
   });
 }
 
@@ -21,6 +23,8 @@ const Addlisting = () => {
   const [food, setFood] = useState('');
   const [servings, setServings] = useState(0);
   const [location, setLocation] = useState('');
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
 
   const handleChangeOrg = event => {
     setOrganization(event.target.value);
@@ -38,9 +42,17 @@ const Addlisting = () => {
     setLocation(event.target.value);
   }
 
+  const handleChangeDate = event => {
+    setDate(event.target.value);
+  }
+
+  const handleChangeTime = event => {
+    setTime(event.target.value);
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    addSomething(organization, food, servings, location);
+    addSomething(organization, food, servings, location, date, time);
 
   };
 
@@ -77,6 +89,23 @@ const Addlisting = () => {
           <input type="text" name="name" onChange={handleChangeLocation}/>
         </label>
       </form>
+
+      <form class="formbox">
+        <label class="form-entry">
+          <h2 class = "form-text">
+            Date:
+          </h2>
+          <input type="text" name="name" onChange={handleChangeDate}/>
+        </label>
+
+        <label class="form-entry">
+          <h2 class="form-text">
+            Time:  
+          </h2>
+          <input type="text" name="name" onChange={handleChangeTime}/>
+        </label>
+      </form>
+
       <form class="formbox" onSubmit={handleSubmit}>
         <input type="submit" value="Submit"></input>
       </form>
